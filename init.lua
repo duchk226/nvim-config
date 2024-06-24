@@ -12,4 +12,5 @@ require("duc-hoang.plugins.lsp.lspconfig")
 require("duc-hoang.plugins.lsp.lspsaga")
 require("duc-hoang.plugins.gitsigns")
 require("duc-hoang.plugins.gitblame")
-
+require("duc-hoang.plugins.octo")
+require("duc-hoang.plugins.others")

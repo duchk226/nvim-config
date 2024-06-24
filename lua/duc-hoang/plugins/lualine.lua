@@ -32,4 +32,3 @@ lualine.setup({
     theme = lualine_nightfly,
   },
 })
-

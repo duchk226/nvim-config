@@ -3,15 +3,15 @@ if not setup then
   return
 end
 
-vim.g.loaded = 1 
+vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
 nvimtree.setup({
- git = {
-  enable = true,
-  ignore = false,
-  timeout = 500
- } 
+  git = {
+    enable = true,
+    ignore = false,
+    timeout = 500
+  }
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {

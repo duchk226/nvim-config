@@ -55,6 +55,7 @@ keymap.set("n", "<leader>rj", "<cmd>horizontal resize -5<cr>")
 keymap.set("n", "<leader>rk", "<cmd>horizontal resize +5<cr>")
 
 keymap.set("n", "<C-f>", vim.lsp.buf.format)
+keymap.set("n", "<C-g>", ":CocCommand prettier.forceFormatDocument<cr>")
 
 keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 
@@ -71,7 +72,11 @@ keymap.set("n", "<leader>cl", ":GitConflictChooseNone<CR>")
 keymap.set("n", "<leader>co", ":bufdo e!<CR>")
 
 keymap.set("n", "<leader>y", ":let @+ = expand(\"%\")<CR>")
-keymap.set("n", "<leader>y", ":let @+ = expand(\"%:p\")<CR>")
+keymap.set("n", "<leader>Y", ":let @+ = expand(\"%:p\")<CR>")
+
+-- Github keymaps
+keymap.set("n", "<leader>p", ":Octo search is:pr is:open author:duchk226<CR>")
+keymap.set("n", "<leader>P", ":Octo search is:pr is:closed author:duchk226<CR>")
 
 local o = vim.o
 
