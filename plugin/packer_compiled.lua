@@ -125,7 +125,7 @@ _G.packer_plugins = {
     url = "https://github.com/f-person/git-blame.nvim"
   },
   ["git-conflict.nvim"] = {
-    config = { "\27LJ\2\nÄ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\15highlights\1\0\2\rincoming\fDiffAdd\fcurrent\rDiffText\1\0\4\16list_opener\ncopen\24disable_diagnostics\1\21default_commands\2\21default_mappings\2\nsetup\17git-conflict\frequire\0" },
+    config = { "\27LJ\2\nÄ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\15highlights\1\0\2\fcurrent\rDiffText\rincoming\fDiffAdd\1\0\4\16list_opener\ncopen\24disable_diagnostics\1\21default_commands\2\21default_mappings\2\nsetup\17git-conflict\frequire\0" },
     loaded = true,
     path = "/Users/duchoang/.local/share/nvim/site/pack/packer/start/git-conflict.nvim",
     url = "https://github.com/akinsho/git-conflict.nvim"
@@ -259,7 +259,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: git-conflict.nvim
 time([[Config for git-conflict.nvim]], true)
-try_loadstring("\27LJ\2\nÄ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\15highlights\1\0\2\rincoming\fDiffAdd\fcurrent\rDiffText\1\0\4\16list_opener\ncopen\24disable_diagnostics\1\21default_commands\2\21default_mappings\2\nsetup\17git-conflict\frequire\0", "config", "git-conflict.nvim")
+try_loadstring("\27LJ\2\nÄ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\15highlights\1\0\2\fcurrent\rDiffText\rincoming\fDiffAdd\1\0\4\16list_opener\ncopen\24disable_diagnostics\1\21default_commands\2\21default_mappings\2\nsetup\17git-conflict\frequire\0", "config", "git-conflict.nvim")
 time([[Config for git-conflict.nvim]], false)
 -- Config for: octo.nvim
 time([[Config for octo.nvim]], true)

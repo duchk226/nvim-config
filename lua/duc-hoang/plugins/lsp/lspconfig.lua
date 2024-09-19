@@ -48,6 +48,8 @@ end
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
+lspconfig.ruby_lsp.setup{}
+
 lspconfig["html"].setup({
   capabilities = capabilities,
   on_attach = on_attach
@@ -99,11 +101,6 @@ lspconfig["lua_ls"].setup({
       },
     },
   },
-})
-
-lspconfig["solargraph"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
 })
 
 lspconfig["jsonls"].setup({

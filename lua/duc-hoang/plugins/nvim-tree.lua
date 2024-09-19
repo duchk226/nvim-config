@@ -11,7 +11,11 @@ nvimtree.setup({
     enable = true,
     ignore = false,
     timeout = 500
-  }
+  },
+  system_open = {
+    cmd = "open",
+    args = {},
+  },
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {

@@ -38,7 +38,7 @@ keymap.set("n", "<leader>]", ":tabn<CR>")
 keymap.set("n", "<leader>l", ":NvimTreeFindFile<CR>")
 
 -- telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")  -- find files within current working directory, respects .gitignore
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files<cr>")  -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")   -- find string in current working directory as you type
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")     -- list open buffers in current neovim instance
@@ -55,7 +55,7 @@ keymap.set("n", "<leader>rj", "<cmd>horizontal resize -5<cr>")
 keymap.set("n", "<leader>rk", "<cmd>horizontal resize +5<cr>")
 
 keymap.set("n", "<C-f>", vim.lsp.buf.format)
-keymap.set("n", "<C-g>", ":CocCommand prettier.forceFormatDocument<cr>")
+keymap.set("n", "<C-g>", ":CocCommand prettier.formatFile<cr>")
 
 keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 
@@ -77,6 +77,8 @@ keymap.set("n", "<leader>Y", ":let @+ = expand(\"%:p\")<CR>")
 -- Github keymaps
 keymap.set("n", "<leader>p", ":Octo search is:pr is:open author:duchk226<CR>")
 keymap.set("n", "<leader>P", ":Octo search is:pr is:closed author:duchk226<CR>")
+
+keymap.set("n", "<leader>df", ":!rm %<CR>:bp<bar>sp<bar>bn<bar>bd<CR>")
 
 local o = vim.o
 
