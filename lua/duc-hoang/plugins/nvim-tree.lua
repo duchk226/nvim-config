@@ -1,28 +1,55 @@
-local setup, nvimtree = pcall(require, "nvim-tree")
-if not setup then
-  return
-end
+return {
+	"nvim-tree/nvim-tree.lua",
+	dependencies = "nvim-tree/nvim-web-devicons",
+	config = function()
+		local nvimtree = require("nvim-tree")
 
-vim.g.loaded = 1
-vim.g.loaded_netrwPlugin = 1
+		-- recommended settings from nvim-tree documentation
+		vim.g.loaded_netrw = 1
+		vim.g.loaded_netrwPlugin = 1
 
-nvimtree.setup({
-  git = {
-    enable = true,
-    ignore = false,
-    timeout = 500
-  },
-  system_open = {
-    cmd = "open",
-    args = {},
-  },
-})
+		nvimtree.setup({
+			view = {
+				width = 35,
+				relativenumber = true,
+			},
+			-- change folder arrow icons
+			renderer = {
+				indent_markers = {
+					enable = true,
+				},
+				icons = {
+					glyphs = {
+						folder = {
+							arrow_closed = "", -- arrow when folder is closed
+							arrow_open = "", -- arrow when folder is open
+						},
+					},
+				},
+			},
+			-- disable window_picker for
+			-- explorer to work well with
+			-- window splits
+			actions = {
+				open_file = {
+					window_picker = {
+						enable = true,
+					},
+				},
+			},
+			filters = {
+				custom = { ".DS_Store" },
+			},
+			git = {
+				ignore = false,
+			},
+		})
 
-vim.api.nvim_create_autocmd("BufEnter", {
-  nested = true,
-  callback = function()
-    if #vim.api.nvim_list_wins() == 1 and require("nvim-tree.utils").is_nvim_tree_buf() then
-      vim.cmd "quit"
-    end
-  end
-})
+		-- set keymaps
+		local keymap = vim.keymap -- for conciseness
+
+		keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
+		keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
+		keymap.set("n", "<leader>r", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
+	end,
+}

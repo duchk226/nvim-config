@@ -4,13 +4,13 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.number = true
 
--- tabs &  indentation 
+-- tabs &  indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
--- line wrapping 
+-- line wrapping
 opt.wrap = false
 
 -- search settings
@@ -25,7 +25,7 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
--- backspace 
+-- backspace
 opt.backspace = "indent,eol,start"
 
 -- clipboard
@@ -37,3 +37,6 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 
+vim.g.lazyvim_ruby_lsp = "solargraph"
+vim.g.lazyvim_ruby_formatter = "rubocop"
+vim.lsp.set_log_level("trace")
